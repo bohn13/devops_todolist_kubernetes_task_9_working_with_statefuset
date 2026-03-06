@@ -9,7 +9,7 @@ echo "Applying Secrets and ConfigMaps..."
 kubectl apply -f .infrastructure/st-secret.yml
 kubectl apply -f .infrastructure/st-config.yml
 kubectl apply -f .infrastructure/secret.yml
-kubectl apply -f .infrastructure/confgiMap.yml # У тебе в файлах була помилка в назві: confgiMap.yml
+kubectl apply -f .infrastructure/configMap.yml
 
 sleep 2
 

@@ -17,6 +17,13 @@ spec:
       containers:
         - name: mysql
           image: mysql:8.0
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "200m"
+              memory: "256Mi"
           env:
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:
@@ -64,13 +71,6 @@ spec:
         - name: mysql-config
           configMap:
             name: mysql-config
-      resources:
-        requests:
-          cpu: "100m"
-          memory: "128Mi"
-        limits:
-          cpu: "200m"
-          memory: "256Mi"
   volumeClaimTemplates:
     - metadata:
         name: data
